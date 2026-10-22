@@ -1,0 +1,12 @@
+{
+  "scan": {"gap_seconds": 60, "min_targets": 15},
+  "bruteforce": {"gap_seconds": 300, "min_failures": 5, "spray_min_users": 3, "spray_max_per_account": 3, "high_failures": 20},
+  "exposure": {"risky_ports": {"21": "FTP", "23": "TELNET", "445": "SMB", "1433": "MS-SQL", "3389": "RDP", "5900": "VNC"}},
+  "exfil": {"min_bytes": 104857600, "high_multiplier": 5, "min_ratio": 10},
+  "ips": {"severities": ["high", "critical"]},
+  "allowlist": {
+    "scanners": ["10.10.5.50"],
+    "backup_destinations": ["198.51.100.200"]
+  },
+  "blocklist": ["203.0.113.250"]
+}
